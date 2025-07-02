@@ -1,9 +1,11 @@
-🚗 Catálogo de Carros
+🚗 Catálogo de Carros:
+
 Este projeto é um catálogo de carros desenvolvido com HTML, CSS e JavaScript. Ele permite exibir uma lista de veículos com informações como modelo, marca, ano, preço e imagem, podendo incluir funcionalidades como filtro por marca ou pesquisa por nome.
 
 
 
 🧩 Funcionalidades
+
 Listagem de carros com imagem e dados.
 
 Filtro por marca, ano ou preço.
@@ -15,6 +17,7 @@ Design responsivo para dispositivos móveis.
 Estrutura simples com HTML + CSS + JavaScript puro (sem frameworks).
 
 🛠 Tecnologias Utilizadas
+
 HTML5
 
 CSS3
@@ -22,9 +25,7 @@ CSS3
 JavaScript (Vanilla)
 
 📁 Estrutura do Projeto
-bash
-Copiar
-Editar
+
 📁 catalogo-carros/
 ├── index.html
 ├── style.css
@@ -34,6 +35,7 @@ Editar
 
 
 📌 Possíveis Melhorias
+
 Integração com API para buscar dados reais de veículos.
 
 Sistema de favoritos.
