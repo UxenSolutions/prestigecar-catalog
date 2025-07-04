@@ -1,303 +1,582 @@
- @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+ @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Fira sans", sans-serif;
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Fira sans", sans-serif;
+ }
+
+ :root {
+     --fundo-principal: #000000;
+     --primary-color: #e10600;
+     --primary-text: #ffffff;
+     --secundary-text: #b0b0b02c;
+     --details: #2b2b2b;
+     --details-hover: #d52424;
+ }
+
+ body {
+     background-color: var(--primary-text);
+ }
+
+ .interface {
+     max-width: 1280px;
+     margin: 0 auto;
+     padding: 0 4%;
+ }
+
+ /* Estilo do Header */
+ header {
+     width: 100%;
+     padding: 20px 0;
+     position: fixed;
+     top: 0;
+     left: 0;
+     transition: .5s;
+     z-index: 100;
+
+     & .interface {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+     }
+
+     & .logo {
+         & img {
+             max-width: 200px;
+         }
+     }
+
+     & .menu-desktop {
+         & nav {
+
+             & ul {
+                 list-style-type: none;
+
+                 & li {
+                     display: inline-block;
+                     margin: 0px 40px;
+                     font-size: 1.1em;
+                     font-weight: 600;
+
+                     & a {
+                         color: var(--primary-text);
+                         text-decoration: none;
+                         font-weight: bold;
+                         display: inline-block;
+                         transition: .2s;
+                     }
+
+                     & a:hover {
+                         transform: scale(1.2);
+                     }
+                 }
+             }
+         }
+     }
+
+     & .btn-contact {
+
+         & button {
+             width: 140px;
+             height: 50px;
+             font-size: 20px;
+             background-color: transparent;
+             border: 1px solid var(--primary-color);
+             color: var(--primary-text);
+             cursor: pointer;
+             border-radius: 16px;
+             transition: .3s;
+         }
+
+         & button:hover {
+             background-color: var(--details-hover);
+             color: var(--primary-text);
+             transition: .3s;
+             transform: scale(1.1);
+         }
+     }
+ }
+ /* Fim do Header */
+
+/* Estilo Menu Dinãmico */
+header .logo img.logo-preta{
+    display: none;
+ }
+header.scrolling{
+    background-color: #0e0d0d6d;
+    padding: 5px 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
-
-:root {
-    --fundo-principal: #000000;
-    --primary-color: #e10600;
-    --primary-text: #ffffff;
-    --secundary-text: #b0b0b02c;
-    --details: #2b2b2b;
-    --details-hover: #ff2c2c;
+header.scrolling .logo .logo-branca{
+    display: none;
 }
-
-body {
-    background-color: var(--primary-text);
+header.scrolling .logo .logo-branca{
+    display: block;
 }
+/* Fim do Estilo Menu Dinãmico */
+ /* ------------------------------------------------------------ */
 
-.interface {
-    max-width: 1280px;
-    margin: 0 auto;
-}
+ /* Estilo do Hero */
+ .hero-site {
+     height: 100vh;
+     background-image: url(../images/Carros/imagemfundoescura.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+     color: white;
 
-/* Estilo do Header */
-header {
-    width: 100%;
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
+     & .interface {
+         display: flex;
+         align-items: center;
+         height: 100%;
 
-    & .interface {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+         & .txt-hero {
+             & h1 {
+                 font-size: 4em;
+                 font-weight: 200;
+                 line-height: 80px;
 
-    & .logo {
-        & img {
-            max-width: 270px;
-        }
-    }
+                 & span {
+                     display: block;
+                     font-weight: 800;
+                 }
 
-    & .menu-desktop {
-        & nav {
+             }
 
-            & ul {
-                list-style-type: none;
+             & p {
+                 font-size: 20px;
+                 font-weight: 300;
+                 margin: 20px 0;
 
-                & li {
-                    display: inline-block;
-                    margin: 0px 40px;
-                    font-size: 1.1em;
-                    font-weight: 600;
+                 & span {
+                     margin-top: 5px;
+                     display: block;
+                     font-weight: 800;
+                 }
 
-                    & a {
-                        color: var(--primary-text);
-                        text-decoration: none;
-                        font-weight: bold;
-                        display: inline-block;
-                        transition: .2s;
-                    }
+             }
 
-                    & a:hover {
-                        transform: scale(1.2);
-                    }
-                }
-            }
-        }
-    }
+             & a {
 
-    & .btn-contact {
+                 & button {
+                     width: 220px;
+                     height: 60px;
+                     font-size: 20px;
+                     background-color: transparent;
+                     border: 1px solid var(--primary-color);
+                     color: var(--primary-text);
+                     cursor: pointer;
+                     border-radius: 16px;
+                     transition: .3s;
+                 }
 
-        & button {
-            width: 140px;
-            height: 50px;
-            font-size: 20px;
-            background-color: transparent;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-text);
-            cursor: pointer;
-            border-radius: 16px;
-            transition: .3s;
-        }
+                 & button:hover {
+                     background-color: var(--details-hover);
+                     color: var(--primary-text);
+                     transition: .3s;
+                     transform: scale(1.1);
+                 }
+             }
+         }
+     }
+ }
+ /* Fim do Hero */
 
-        & button:hover {
-            background-color: var(--details-hover);
-            color: var(--primary-text);
-            transition: .3s;
-            transform: scale(1.1);
-        }
-    }
-}
-/* Fim do Header */
+ /* ------------------------------------------------------------ */
 
-/* ------------------------------------------------------------ */
-
-/* Estilo do Hero */
-.hero-site {
-    height: 100vh;
-    background-image: url(../images/Carros/imagemfundoescura.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: white;
-
-    & .interface {
-        display: flex;
-        align-items: center;
-        height: 100%;
-
-        & .txt-hero {
-            & h1 {
-                font-size: 4em;
-                font-weight: 200;
-                line-height: 80px;
-
-                & span {
-                    display: block;
-                    font-weight: 800;
-                }
-
-            }
-
-            & p {
-                font-size: 20px;
-                font-weight: 300;
-                margin: 20px 0;
-
-                & span {
-                    margin-top: 5px;
-                    display: block;
-                    font-weight: 800;
-                }
-
-            }
-
-            & a {
-
-                & button {
-                    width: 220px;
-                    height: 60px;
-                    font-size: 20px;
-                    background-color: transparent;
-                    border: 1px solid var(--primary-color);
-                    color: var(--primary-text);
-                    cursor: pointer;
-                    border-radius: 16px;
-                    transition: .3s;
-                }
-
-                & button:hover {
-                    background-color: var(--details-hover);
-                    color: var(--primary-text);
-                    transition: .3s;
-                    transform: scale(1.1);
-                }
-            }
-        }
-    }
-}
-/* Fim do Hero */
-
-/* ------------------------------------------------------------ */
-
-/* Estilo do Catálogo */
-.catalog {
-    width: 100%;
-    padding: 100px;
+ /* Estilo do Catálogo */
+ .catalog {
+     width: 100%;
+     padding: 100px;
 
 
-    & .tittle-wrapper-catalog {
-        
-        padding-top: 20px;
+     & .tittle-wrapper-catalog {
+
+         padding-top: 20px;
+         margin-bottom: 20px;
+
+         & h3 {
+             font-size: 30px;
+             font-weight: 200px;
+             color: rgb(99, 98, 98);
+         }
+
+         & p {
+             font-size: 25px;
+             font-weight: 200px;
+             color: rgb(99, 98, 98);
+         }
+     }
+
+     & .filter-card {
+         width: 980px;
+         height: 150px;
+         background-color: var(--secundary-text);
+         border-radius: 8px;
+         margin: 0 auto;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: center;
+
+         & .search-input {
+             width: 700px;
+             height: 50px;
+             border: none;
+             border-radius: 4px 0px 0px 4px;
+             text-indent: 10px;
+             border: 1px solid var(--fundo-principal);
+         }
+
+         & button {
+             width: 130px;
+             height: 60px;
+             font-size: 25px;
+             background-color: transparent;
+             border: 1px solid var(--fundo-principal);
+             color: var(--fundo-principal);
+             cursor: pointer;
+             border-radius: 16px;
+             transition: .3s;
+             margin-left: 10px;
+         }
+
+         & button:hover {
+             background-color: var(--details-hover);
+             color: var(--primary-text);
+             transition: .3s;
+             transform: scale(1.1);
+         }
+     }
+
+     & .card-wrapper {
+         max-width: 1000px;
+         height: 100%;
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+         grid-gap: 30px;
+         padding-top: 50px;
+         margin: 0 auto;
+
+         & .card-item {
+             height: 360px;
+             background-color: var(--secundary-text);
+             border-radius: 8px;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: space-around;
+
+             & img {
+                 width: 230px;
+                 height: 250px;
+                 margin-top: 10px;
+                 border-radius: 8px;
+                 box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+             }
+
+             & .card-content {
+                 height: 40%;
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+                 justify-content: space-around;
+
+                 & h3 {
+                     width: 190px;
+                     margin-top: 5px;
+                 }
+
+                 & p {
+                     width: 90%;
+                     font-style: italic;
+                     color: rgb(117, 116, 116);
+                 }
+
+                 & button {
+                     width: 70%;
+                     padding: 5px 0px;
+                     border: 1px solid var(--details);
+                     background-color: transparent;
+                     border-radius: 8px;
+                     color: var(--fundo-principal);
+                     font-weight: bold;
+                     font-size: 1em;
+                     cursor: pointer;
+                     transition: .3s ease;
+                     margin-bottom: 10px;
+                 }
+
+                 & button:hover {
+                     background-color: var(--details-hover);
+                     color: var(--primary-text);
+                     transition: .3s;
+                     transform: scale(1.1);
+                 }
+             }
+         }
+     }
+ }
+ /* Fim do Catálogo */
+
+ /* ------------------------------------------------------------ */
+
+ /* Estilo do About */
+ .about {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 50px 0px;
+
+     & .about-content {
+         max-width: 1000px;
+         min-width: 300px;
+         height: 600px;
+         background-color: #cfcbcb;
+         margin: 0 auto;
+         border-radius: 8px;
+         z-index: 10;
+         padding: 10px;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); 
+
+         & .left {
+             width: 25%;
+             min-width: 300px;
+             height: 100%;
+             background-color: #0000002d;
+             border-radius: 8px;
+         }
+
+         & .rigth {
+             width: 65%;
+             height: 100%;
+             display: flex;
+             flex-direction: column;
+             align-items: flex-start;
+             justify-content: flex-start;
+             padding-top: 10%;
+
+             & h3 {
+                 text-align: center;
+                 width: 90%;
+                 margin-bottom: 20px;
+             }
+
+             & p {
+                 max-width: 90%;
+                 font-size: 1em;
+                 letter-spacing: 2px;
+                 text-align: center;
+                 color: rgba(0, 0, 0, 0.5);
+             }
+         }
+     }
+
+ }
+ /* Fim do About */
+
+ /* ------------------------------------------------------------ */
+
+ /* Estilo do Contato */
+ .contact{
+    background-color: #dedede;
+    padding: 80px 0px;
+
+    & .txt-contact{
+       display: inline-block; 
+       width: 50%;
+       margin-right: -4px;
+       vertical-align: middle;
+
+       & h3{
+        font-size: 2.5em;
+        line-height: 50px;
+        font-weight: 300;
         margin-bottom: 20px;
 
-        & h3 {
-            font-size: 30px;
-            font-weight: 200px;
-            color: rgb(99, 98, 98);
-        }
-
-        & p {
-            font-size: 25px;
-            font-weight: 200px;
-            color: rgb(99, 98, 98);
-        }
+         & span{
+            display: block;
+            font-weight: 700;
+         }
+       }
     }
 
-    & .filter-card {
-        width: 980px;
-        height: 150px;
-        background-color: var(--secundary-text);
-        border-radius: 8px;
-        margin: 0 auto;
+    & .icons-contact{
+        display: inline-block; 
+       width: 50%;
+       margin-right: -4px;
+       vertical-align: middle;
+
+       & button{
         display: flex;
-        flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        width: 60%;
+        height: 60px;
+        margin: 0 auto 20px auto;
+        padding: 0 60px;
+        background-color: transparent;
+        border: 2px solid var(--details);
+        color: var(--fundo-principal);
+        cursor: pointer;
+        border-radius: 16px;
+        transition: .3s;
 
-        & .search-input {
-            width: 700px;
-            height: 50px;
-            border: none;
-            border-radius: 4px 0px 0px 4px;
-            text-indent: 10px;
-            border: 1px solid var(--fundo-principal);
-        }
-
-        & button {
-            width: 130px;
-            height: 60px;
-            font-size: 25px;
-            background-color: transparent;
-            border: 1px solid var(--fundo-principal);
+        & i{
+            font-size: 2em;
+            margin-right: 10px;
             color: var(--fundo-principal);
-            cursor: pointer;
-            border-radius: 16px;
-            transition: .3s;
-            margin-left: 10px;
         }
 
-        & button:hover {
-            background-color: var(--details-hover);
-            color: var(--primary-text);
-            transition: .3s;
-            transform: scale(1.1);
+        & p{
+            font-size: 20px;
         }
+       }
+
+       & button:hover {
+             background-color: var(--details-hover);
+             color: var(--primary-text);
+             transition: .3s;
+             transform: scale(1.1);
+         }
+
+       & a{
+        text-decoration: none;
+
+        
+       }
     }
+ }
+ /* Fim do Contato */
 
-    & .card-wrapper {
-        max-width: 1000px;
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        grid-gap: 30px;
-        padding-top: 50px;
-        margin: 0 auto;
+ /* ------------------------------------------------------------ */
 
-        & .card-item {
-            height: 360px;
-            background-color: var(--secundary-text);
-            border-radius: 8px;
+ /* Estilo do TestDrive */
+.testdrive{
+        height: 600px;
+        background-image: url(../images/Carros/imagemparalax.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        color: var(--primary-text);
+        text-align: center;
+
+        & .interface{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
+            color: var(--primary-text);
+            z-index: 2;
+        }
 
-            & img {
-                width: 230px;
-                height: 250px;
-                margin-top: 10px;
-                border-radius: 8px;
-                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        & h3{
+            font-size: 3em;
+            font-weight: 300;
+            line-height: 50px;
+
+            & span{
+                display: block;
+                font-weight: 700;
             }
+        }
+        
 
-            & .card-content {
-                height: 40%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-around;
+        & button{
+        font-size: 18px;
+        background-color: transparent;
+        border: 1px solid var(--details);
+        color: var(--primary-text);
+        cursor: pointer;
+        border-radius: 16px;
+        transition: .3s;
+        padding: 10px 20px;
+        margin-top: 20px;
+        }
+        
+        & button:hover {
+             background-color: var(--details-hover);
+             color: var(--primary-text);
+             transition: .3s;
+             transform: scale(1.1);
+         }
+        
+        & .overlay{
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.815);
+            z-index: 1;
+        }
+    }
+/* Fim do TestDrive */
 
-                & h3 {
-                    width: 190px;
-                    margin-top: 5px;
-                }
+/* ------------------------------------------------------------ */
 
-                & p {
-                    width: 90%;
-                    font-style: italic;
-                    color: rgb(117, 116, 116);
-                }
+/* Estilo do Footer */
+footer{
+    background-color: var(--primary-text);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px;
+    color: var(--fundo-principal);
+    
+    & .top-footer{
+        & button{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--details);
+            background-color: transparent;
+            color: var(--fundo-principal);
+            font-size: 25px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: .3s;
+        }
 
-                & button {
-                    width: 70%;
-                    padding: 5px 0px;
-                    border: 1px solid var(--details);
-                    background-color: transparent;
-                    border-radius: 8px;
-                    color: var(--fundo-principal);
-                    font-weight: bold;
-                    font-size: 1em;
-                    cursor: pointer;
-                    transition: .3s ease;
-                    margin-bottom: 10px;
-                }
+        & button:hover{
+            background-color: var(--details-hover);
+            color: var(--primary-text);
+            transform: scale(1.1);
+        }
+    }
 
-                & button:hover {
-                    background-color: var(--details-hover);
-                    color: var(--primary-text);
-                    transition: .3s;
-                    transform: scale(1.1);
-                }
-            }
+    & .middle-footer{
+        margin: 20px 0px;
+        & a{
+            color: var(--fundo-principal);
+            margin: 0 15px;
+            text-decoration: none;
+        }
+    }
+
+    & .bottom-footer{
+        border-top: 2px solid var(--fundo-principal);
+
+        & p{
+            color: var(--fundo-principal);
+            margin-top: 10px;
         }
     }
 }
-/* Fim do Catálogo */
+    
