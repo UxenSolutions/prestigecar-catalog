@@ -116,7 +116,34 @@ header.scrolling .logo .logo-branca{
     display: block;
 }
 /* Fim do Estilo Menu Dinãmico */
+
  /* ------------------------------------------------------------ */
+
+ /* Estilo Botão do Menu Mobile */
+    header{
+        & .btn-menu-mobile{
+
+            & div{
+                background-color: var(--primary-text);
+                height: 3px;
+                margin: 10px 0;
+            }
+            & .line-menumob-1{
+                width: 30px;
+            }
+
+            & .line-menumob-1.active1{
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            & .line-menumob-2{
+                width: 20px;
+            }
+        }
+            
+    }
+    /* header .btn-menu-mobile .line-menumob-1. */
+/* Fim do Botão do Menu Mobile */
 
  /* Estilo do Hero */
  .hero-site {
