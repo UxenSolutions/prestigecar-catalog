@@ -206,7 +206,7 @@ body.body-active{
  /* Estilo do Hero */
  .hero-site {
      height: 100vh;
-     background-image: url(../images/Carros/imagemfundoescura.jpg);
+     background-image: url(images/Carros/imagemfundoescura.jpg);
      background-repeat: no-repeat;
      background-size: cover;
      background-position: center;
@@ -548,7 +548,7 @@ body.body-active{
  /* Estilo do TestDrive */
 .testdrive{
         height: 600px;
-        background-image: url(../images/Carros/imagemparalax.jpg);
+        background-image: url(images/Carros/imagemparalax.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
