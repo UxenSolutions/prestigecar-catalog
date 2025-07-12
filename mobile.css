@@ -24,7 +24,13 @@
 
     /* Fim do Hero Responsivo */
     .hero-site {
-
+    height: 100vh;
+     background-image: url(images/Carros/imagemfundoescura.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+     color: white;
         & .interface {
             display: flex;
             align-items: center;
@@ -109,7 +115,15 @@
 
     /* Inicio do TestDrive Responsivo */
     .testdrive{
-
+        height: 600px;
+        background-image: url(images/Carros/imagemparalax.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        color: var(--primary-text);
+        text-align: center;
         & h3{
             font-size: 2em;
             font-weight: 300;
