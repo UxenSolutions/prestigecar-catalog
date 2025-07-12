@@ -120,31 +120,89 @@ header.scrolling .logo .logo-branca{
  /* ------------------------------------------------------------ */
 
  /* Estilo Botão do Menu Mobile */
-    header{
-        & .btn-menu-mobile{
+header .btn-menu-mobile{
+    display: none;
+    position: relative;
+    z-index: 111;
+}
 
-            & div{
-                background-color: var(--primary-text);
-                height: 3px;
-                margin: 10px 0;
-            }
-            & .line-menumob-1{
-                width: 30px;
-            }
+ header .btn-menu-mobile div{
+    background-color: white;
+    height: 3px;
+    margin: 10px 0;
+    transition: .3s;
+}
 
-            & .line-menumob-1.active1{
-                transform: rotate(45deg) translate(5px, 5px);
-            }
 
-            & .line-menumob-2{
-                width: 20px;
-            }
-        }
-            
-    }
-    /* header .btn-menu-mobile .line-menumob-1. */
+ header .btn-menu-mobile .line-menumob-1{
+    width:  30px;
+}
+
+header .btn-menu-mobile .line-menumob-2{
+    width:  20px;
+}
+
+header .btn-menu-mobile .line-menumob-1.line-menumob-1-active{
+    transform: rotate(45deg) translate(31%);
+}
+
+header .btn-menu-mobile .line-menumob-2.line-menumob-2-active{
+    transform: rotate(-45deg) translate(31%);;
+    width: 30px;
+}
 /* Fim do Botão do Menu Mobile */
 
+
+ /* Estilo do Menu Mobile */
+header .menu-mobile{
+    width: 0;
+    height: 0;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+header .menu-mobile nav{
+    width: 100%;
+}
+
+header .menu-mobile nav ul{
+    list-style-type: none;
+}
+
+header .menu-mobile nav a{
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    padding: 20px 0;
+    display: block;
+    transition: .3s;
+    
+}
+
+header .menu-mobile a:hover{
+    color: var(--primary-text);
+    background-color: var(--details-hover);
+    box-shadow: 0 0 20px #fff;
+    transform: scale(1.1);
+}
+
+header .menu-mobile.menu-mobile-active{
+    width: 100%;
+    height:100vh;
+}
+
+body.body-active{
+    overflow: hidden;
+}
  /* Estilo do Hero */
  .hero-site {
      height: 100vh;
@@ -289,7 +347,7 @@ header.scrolling .logo .logo-branca{
          margin: 0 auto;
 
          & .card-item {
-             height: 360px;
+             height: 400px;
              background-color: var(--secundary-text);
              border-radius: 8px;
              display: flex;
@@ -324,7 +382,7 @@ header.scrolling .logo .logo-branca{
                  }
 
                  & button {
-                     width: 70%;
+                     width: 60%;
                      padding: 5px 0px;
                      border: 1px solid var(--details);
                      background-color: transparent;

@@ -4,6 +4,10 @@
     header .btn-contact {
         display: none;
     }
+
+    header .btn-menu-mobile{
+    display: block;
+}
 }
 
 /* Inicio da Logo Responsiva */
@@ -113,4 +117,143 @@
         }
     }
     /* Fim do TestDrive Responsivo */
+
+    /* Inicio do Catálogo Responsivo */
+    .catalog {
+     width: 100%;
+     padding: 40px;
+
+
+     & .tittle-wrapper-catalog {
+
+         padding-top: 20px;
+         margin-bottom: 20px;
+
+         & h3 {
+             font-size: 15px;
+             font-weight: 200px;
+             color: rgb(99, 98, 98);
+         }
+
+         & p {
+             font-size: 15px;
+             font-weight: 200px;
+             color: rgb(99, 98, 98);
+         }
+     }
+
+     & .filter-card {
+         width: 300px;
+         height: 150px;
+         background-color: var(--secundary-text);
+         border-radius: 8px;
+         margin: 0 auto;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: center;
+
+
+         & .search-input {
+             width: 800px;
+             height: 50px;
+             border: none;
+             border-radius: 4px 0px 0px 4px;
+             text-indent: 10px;
+             border: 1px solid var(--fundo-principal);
+         }
+
+         & button {
+             width: 150px;
+             height: 60px;
+             font-size: 15px;
+             background-color: transparent;
+             border: 1px solid var(--fundo-principal);
+             color: var(--fundo-principal);
+             cursor: pointer;
+             border-radius: 16px;
+             transition: .3s;
+             margin-left: 10px;
+         }
+
+         & button:hover {
+             background-color: var(--details-hover);
+             color: var(--primary-text);
+             transition: .3s;
+             transform: scale(1.1);
+         }
+     }
+
+     & .card-wrapper {
+         max-width: 1000px;
+         height: 100%;
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+         grid-gap: 30px;
+         padding-top: 50px;
+         margin: 0 auto;
+
+         & .card-item {
+             height: 400px;
+             background-color: var(--secundary-text);
+             border-radius: 8px;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: space-around;
+
+             & img {
+                 width: 230px;
+                 height: 250px;
+                 margin-top: 10px;
+                 border-radius: 8px;
+                 box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+             }
+
+             & .card-content {
+                 height: 40%;
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+                 justify-content: space-around;
+
+                 & h3 {
+                     width: 190px;
+                     margin-top: 5px;
+                 }
+
+                 & p {
+                     width: 90%;
+                     font-style: italic;
+                     color: rgb(117, 116, 116);
+                 }
+
+                 & button {
+                     width: 70%;
+                     padding: 5px 0px;
+                     border: 1px solid var(--details);
+                     background-color: transparent;
+                     border-radius: 8px;
+                     color: var(--fundo-principal);
+                     font-weight: bold;
+                     font-size: 1em;
+                     cursor: pointer;
+                     transition: .3s ease;
+                     margin-bottom: 10px;
+                 }
+
+                 & button:hover {
+                     background-color: var(--details-hover);
+                     color: var(--primary-text);
+                     transition: .3s;
+                     transform: scale(1.1);
+                 }
+             }
+         }
+     }
+ }
+    /* Fim do Catálogo Responsivo */
+
+    /* Inicio do About Responsivo */
+   
 }
