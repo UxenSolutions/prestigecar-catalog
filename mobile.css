@@ -13,7 +13,7 @@
 /* Inicio da Logo Responsiva */
 @media screen and (max-width: 1100px) {
     header .logo img {
-        max-width: 150px;
+        max-width: 200px;
     }
 }
 
